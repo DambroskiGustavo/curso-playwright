@@ -61,5 +61,4 @@ test.only('Ações Básicas 2', async ({ page }) => {
     await imgInfo3.getByRole('link').click();
     await expect(page).toHaveURL('https://the-internet.herokuapp.com/users/3');
         
-    // await imgInfo2.locator('a').click();
 })
