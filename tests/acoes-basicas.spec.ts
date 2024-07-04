@@ -45,17 +45,17 @@ test('Ações Básicas 2', async ({ page }) => {
 
     await img1.hover();
     await expect(imgInfo1).toBeVisible();
-    await expect(imgInfo2).not.toBeVisible();
-    await expect(imgInfo3).not.toBeVisible();
+    await expect(imgInfo2).toBeHidden();
+    await expect(imgInfo3).toBeHidden();
 
     await img2.hover();
-    await expect(imgInfo1).not.toBeVisible();
+    await expect(imgInfo1).toBeHidden();
     await expect(imgInfo2).toBeVisible();
-    await expect(imgInfo3).not.toBeVisible();
+    await expect(imgInfo3).toBeHidden();
 
     await img3.hover();
-    await expect(imgInfo1).not.toBeVisible();
-    await expect(imgInfo2).not.toBeVisible();
+    await expect(imgInfo1).toBeVisible();
+    await expect(imgInfo2).toBeVisible();
     await expect(imgInfo3).toBeVisible();
 
     await imgInfo3.getByRole('link').click();
